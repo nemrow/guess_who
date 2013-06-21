@@ -1,5 +1,4 @@
 get '/' do
-  @users = User.all
   @fb_login_link = FBHelper.get_login_link
   erb :index
 end
