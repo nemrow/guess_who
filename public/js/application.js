@@ -1,7 +1,25 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+function init() {
+	console.log('Init')
+  socket = io.connect("http://localhost", {port: 8000, transports: ["websocket"]});
+  setEventHandlers();
+};
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+var setEventHandlers = function() {
+  socket.on("connect", onSocketConnected);
+  socket.on("wasup", onWasup);
+};
+
+var onSocketConnected = function() {
+  socket.emit("new client");
+};
+
+var onWasup = function(data) {
+	console.log('wasup')
+	$("#info ul").append('<li>' + data.wasup + '</li>');
+}
+
+$('document').ready(function() {
+	console.log('Ready')
+  init();
 });
