@@ -1,12 +1,21 @@
 get '/' do
-  @fb_login_link = FBHelper.get_login_link
+  @fb_login_link = get_login_link
+
+  if current_user
+  	@friends = get_all_friends
+  end
+
   erb :index
 end
 
 get '/facebook_auth' do
-	user = FBHelper.get_new_access_token(params[:code])
+	user = get_new_access_token(params[:code])
 	session[:user_id] = user.id
 	redirect to '/'
+end
+
+get 'create/game' do 
+	erb :game
 end
 
 get '/logout' do 

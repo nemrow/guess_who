@@ -3,8 +3,8 @@
       <h1>Momes</h1>
       <nav>
         <ul>
-          <% if session[:user_id] %>
-            <li>Hello <%= current_user.name %></li>
+          <% if current_user %>
+            <li>Hello <%= current_user.first_name %></li>
             <li><a href="/logout">Logout</a>
           <% else %>
             <li><a href="<%= @fb_login_link %>">Login through facebook</a></li>
