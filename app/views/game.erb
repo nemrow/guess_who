@@ -1,0 +1,15 @@
+<div class="board-game-container">
+	<% 18.times do |index| %>
+		<div class="card-container">
+			<div class="card-img-shell">
+				<img src="http://graph.facebook.com/<%= index+4 %>/picture?width=300&height=300">
+			</div>
+		</div>
+	<% end %>
+	<div class="chat-container">
+		<div class="chat-logger-shell">
+			<p><span class="user">Jordan:</span>This game is seriously stupid. like seriously.</p>
+		</div>
+		<textarea placeholder="Enter your chats here.."></textarea>
+	</div>
+</div>

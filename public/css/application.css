@@ -28,7 +28,40 @@ header nav ul li a, header nav ul li a:visited{
 header nav ul li a:hover{
 	color: grey;
 }
+hr.card-bar{
+	width: 100%;
+	header: 10px;
+	background-color: grey;
+	z-index: 1;
+	position: absolute;
+}
 .container{
 	width: 1000px;
 	margin: 0 auto;
+}
+.board-game-container{
+	width: 840px;
+	overflow: auto;
+	margin: 50px auto;
+}
+.card-container{
+	width: 100px;
+	height: 150px;
+	background-color: black;
+	float: left;
+	margin: 0 20px 20px 20px;
+}
+.card-img-shell{
+	width: 80%;
+	height: 80%;
+	overflow: hidden;
+	top: 10%;
+	left: 10%;
+	margin: 0;
+	position: relative;
+}
+.card-container img{
+	height:100%; 
+	left: -20px;
+	position: relative;
 }

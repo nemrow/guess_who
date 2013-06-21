@@ -23,4 +23,8 @@ get '/logout' do
 	redirect to '/'
 end
 
+get '/game' do 
+	erb :game
+end
+
 

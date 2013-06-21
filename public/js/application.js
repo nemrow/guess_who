@@ -21,5 +21,5 @@ var onWasup = function(data) {
 
 $('document').ready(function() {
 	console.log('Ready')
-  init();
+  // init();
 });
