@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :board
+  has_one :mystery_friend, through: :board, source: :friends
 end
