@@ -14,7 +14,11 @@ get '/facebook_auth' do
 	redirect to '/'
 end
 
-get 'create/game' do 
+get '/create/game' do 
+  if current_user
+    @my_friends = get_all_friends.sample(25)
+  end
+  p @my_friends
 	erb :game
 end
 

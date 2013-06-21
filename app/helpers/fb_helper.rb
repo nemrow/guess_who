@@ -54,7 +54,7 @@ def facebook_request(params)
 end
 
 def get_facebook_user_img(id)
-	"https://graph.facebook.com/#{id}/picture"
+	"https://graph.facebook.com/#{id}/picture?width=200&height=200"
 end
 
 def fb_access_token
