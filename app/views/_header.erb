@@ -1,0 +1,15 @@
+<header>
+    <div class="container">
+      <h1>Momes</h1>
+      <nav>
+        <ul>
+          <% if session[:user_id] %>
+            <li>Hello <%= current_user.name %></li>
+            <li><a href="/logout">Logout</a>
+          <% else %>
+            <li><a href="<%= @fb_login_link %>">Login through facebook</a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
