@@ -42,13 +42,11 @@ class FBHelper
 	friends_array = []
 	friends = facebook_request("friends?fields=first_name,last_name,gender")
 	friends["data"].each do |friend|
-		if friend["gender"] == current_user.sexual_pref
-			friends_array << Friend.new(:first_name => friend["first_name"], 
-											:last_name => friend["last_name"],
-											:gender => friend["gender"],
-											:img_url => get_facebook_user_img(friend["id"]),
-											:fb_id => friend["id"])
-			end
+		friends_array << Friend.new(:first_name => friend["first_name"], 
+										:last_name => friend["last_name"],
+										:gender => friend["gender"],
+										:img_url => get_facebook_user_img(friend["id"]),
+										:fb_id => friend["id"])
 		end
 		friends_array
 	end
