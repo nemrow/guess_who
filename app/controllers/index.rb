@@ -32,3 +32,14 @@ get '/game' do
 end
 
 
+get '/get_board' do 
+  board = Board.create
+
+p board.id
+
+  content_type "json"
+
+  board.id.to_json
+end
+
+
