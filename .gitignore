@@ -20,6 +20,7 @@ public/assets
 .idea/
 ignored/
 .irb-save-history
+.ruby-gemset
 chromedriver.log
 .tddium*
 bin/
